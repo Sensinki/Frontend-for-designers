@@ -1,5 +1,5 @@
 # Procesverslag
-**Auteur:** -jouw naam-
+**Auteur:** -Sena Nur Korkutan-
 
 **De opdrachten:** [opdracht 1](opdracht1/index.html) en [opdracht 2](opdracht2/index.html)
 
@@ -12,8 +12,14 @@ Nb. De standaardstructuur en de spartaanse opmaak van de README.md zijn helemaal
 Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard open zetten. Fijn om dat steeds voor de relevante stuk(ken) te doen.
 
 
-
 ## Bronnenlijst
+
+### Opdracht 1 
+  1. -bron 1-
+  2. -bron 2-
+  3. -...-
+
+### Opdracht 2 
   1. -bron 1-
   2. -bron 2-
   3. -...-
