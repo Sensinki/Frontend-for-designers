@@ -44,16 +44,39 @@ button:not(:disabled), summary {
 	--color-m: #1ABCFE;
 	--color-a: #0ACF83;
 
+	--color-f-shadow: #c03b13;
+	--color-i-shadow: #c45548;
+	--color-g-shadow: #6637a2;
+	--color-m-shadow: #12749b;
+	--color-a-shadow: #098858;
+
+	--color-f-deepte: #541907;
+	--color-i-deepte: #6b1309;
+	--color-g-deepte: #311a4f;
+	--color-m-deepte: #0b3e52;
+	--color-a-deepte: #05432b;
+
+
+
 	/* sizes */
-	--width-letter: 90px;
-	--height-letter: 90px;
-	--border-radius-size: 50px;
+	--width-letter: 4em;
+	--height-letter: 4em;
+	--border-radius-size: 2em;
 
 	
 
 }
 
 
+/*********/
+/* MEDIA */
+/*********/
+
+@media (prefers-reduced-motion: reduce) {
+	body {
+	  animation: none;
+	}
+  }
 
 
 
@@ -80,6 +103,7 @@ body {
 	/* sizes */
  	width: 100%;
 	height: 100vh;
+	font-size: 2vmin;
 }
 
 /* jouw code */
@@ -90,9 +114,8 @@ h1 {
   	flex-wrap: wrap;
 
 	/* sizes */
-	width: 180px;
-  	height: 270px;
-	
+	width: 8em;
+  	height: 12em;
 }
 
 span {
@@ -103,6 +126,8 @@ span {
 /* CODE FOR "F" */
 
 span:nth-of-type(1) {
+	position: relative;
+
 	/* shape */
 	border-top-left-radius: var(--border-radius-size);
   	border-bottom-left-radius: var(--border-radius-size);
@@ -111,31 +136,104 @@ span:nth-of-type(1) {
 	color: transparent;
 	background-color: var(--color-f);
 
+	
+	/* ??? */
+	/* SHADOW NASIL OLACAK */
+	/* ??? */
+
+
 	/* sizes */
 	width: 	var(--width-letter);
   	height: var(--height-letter);
+
 }
+
+span:nth-of-type(1)::after {
+	position: absolute;
+	inset: 0;
+	/* shape */
+	border-top-left-radius: var(--border-radius-size);
+  	border-bottom-left-radius: var(--border-radius-size);
+
+	content: '';
+	background-color: var(--color-f-shadow);
+	box-shadow: inset 0.25em 0.2em 0.15em var(--color-f-deepte);
+
+}
+
+/* body {
+	
+	animation-name: princess;
+  	animation-duration: 3s;
+  	animation-iteration-count: infinite;
+}
+
+@keyframes princess {
+  0% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: translateY(-100%);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0);
+  }
+} */
+
 
 /* CODE FOR "I" */
 
 span:nth-of-type(2) {
+	/* position */
+	position: relative;
+	
+
 	/* shape */
 	border-top-right-radius: var(--border-radius-size);
   	border-bottom-right-radius: var(--border-radius-size);
 
 	/* color */
-	background-color: var(--color-i);
-	color: transparent;
+	color: transparent;	
+	background-color: var(--color-i-shadow);
+	box-shadow: inset 0.25em 0.2em 0.15em var(--color-i-deepte);
 
 	/* sizes */
 	width: 	var(--width-letter);
   	height: var(--height-letter);
+
+
+
+}
+
+span:nth-of-type(2)::after {
+	/* position */
+	position: absolute;
+	bottom: 5em;
+	left: 8em;
+
+	/* shape */
+	border-top-right-radius: var(--border-radius-size);
+  	border-bottom-right-radius: var(--border-radius-size);
+
+	content: '';
+
+	/* color */
+	background-color: var(--color-i);
+
+	/* sizes */
+	width: var(--width-letter);	
+	height: var(--height-letter);
+
 
 }
 
 /* CODE FOR "G" */
 
 span:nth-of-type(3) {
+	position: relative;
+
 	/* shape */
 	border-top-left-radius: var(--border-radius-size);
 	border-bottom-left-radius: var(--border-radius-size);
@@ -150,9 +248,24 @@ span:nth-of-type(3) {
 
 }
 
+span:nth-of-type(3)::after {
+	position: absolute;
+	inset: 0;
+	/* shape */
+	border-top-left-radius: var(--border-radius-size);
+  	border-bottom-left-radius: var(--border-radius-size);
+
+	content: '';
+	background-color: var(--color-g-shadow);
+	box-shadow: inset 0.25em 0.2em 0.15em var(--color-g-deepte);
+
+}
+
 /* CODE FOR "M" */
 
 span:nth-of-type(4) {
+	position: relative;
+
 	/* shape */
 	border-radius: var(--border-radius-size);
 
@@ -166,9 +279,22 @@ span:nth-of-type(4) {
 
 }
 
+span:nth-of-type(4)::after {
+	position: absolute;
+	inset: 0;
+	/* shape */
+		border-radius: var(--border-radius-size);
+
+	content: '';
+	background-color: var(--color-m-shadow);
+	box-shadow: inset 0.25em 0.2em 0.15em var(--color-m-deepte);
+
+}
+
 /* CODE FOR "A" */
 
 span:nth-of-type(5) {
+	position: relative;
 	/* shape */
 	border-top-left-radius: var(--border-radius-size);
 	border-bottom-left-radius: var(--border-radius-size);
@@ -184,13 +310,19 @@ span:nth-of-type(5) {
 
 }
 
+
+/* DE CONTENT MET SPATIE NIET MOGELIJK TE ZIEN */
 span:nth-of-type(5)::after {
+	position: absolute;
+	inset: 0;
 	/* shape */
 	border-top-left-radius: var(--border-radius-size);
 	border-bottom-left-radius: var(--border-radius-size);
 	border-bottom-right-radius: var(--border-radius-size);
 
 	content: '';
-	background-color: green;
+	background-color: var(--color-a-shadow);
+	box-shadow: inset 0.25em 0.2em 0.15em var(--color-a-deepte);
+
 }
 
