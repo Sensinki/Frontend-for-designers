@@ -76,7 +76,7 @@ button:not(:disabled), summary {
 	body {
 	  animation: none;
 	}
-  }
+}
 
 
 
@@ -101,7 +101,7 @@ body {
  	background-color: var(--color-background);
 
 	/* sizes */
- 	width: 100%;
+ 	width: 100vw;
 	height: 100vh;
 	font-size: 2vmin;
 }
@@ -123,42 +123,45 @@ span {
   	height: var(--height-letter);
 }
 
+span::after {
+	width: 	var(--width-letter);
+  	height: var(--height-letter);
+}
+
 /* CODE FOR "F" */
 
 span:nth-of-type(1) {
+	/* position */
 	position: relative;
-
+	z-index: 0;
+	
 	/* shape */
 	border-top-left-radius: var(--border-radius-size);
   	border-bottom-left-radius: var(--border-radius-size);
 
+
 	/* color */
 	color: transparent;
 	background-color: var(--color-f);
-
-	
-	/* ??? */
-	/* SHADOW NASIL OLACAK */
-	/* ??? */
-
-
-	/* sizes */
-	width: 	var(--width-letter);
-  	height: var(--height-letter);
+	box-shadow: inset 0.25em 0.2em 0.15em var(--color-i-deepte);
 
 }
 
 span:nth-of-type(1)::after {
+	/* position */
 	position: absolute;
-	inset: 0;
+	bottom: -6em;
+	left: -10em;
+	z-index: 1;
+
 	/* shape */
 	border-top-left-radius: var(--border-radius-size);
   	border-bottom-left-radius: var(--border-radius-size);
 
 	content: '';
-	background-color: var(--color-f-shadow);
-	box-shadow: inset 0.25em 0.2em 0.15em var(--color-f-deepte);
 
+	/* color */
+	background-color: var(--color-f);
 }
 
 /* body {
@@ -188,8 +191,8 @@ span:nth-of-type(1)::after {
 span:nth-of-type(2) {
 	/* position */
 	position: relative;
+	z-index: 0;
 	
-
 	/* shape */
 	border-top-right-radius: var(--border-radius-size);
   	border-bottom-right-radius: var(--border-radius-size);
@@ -198,13 +201,6 @@ span:nth-of-type(2) {
 	color: transparent;	
 	background-color: var(--color-i-shadow);
 	box-shadow: inset 0.25em 0.2em 0.15em var(--color-i-deepte);
-
-	/* sizes */
-	width: 	var(--width-letter);
-  	height: var(--height-letter);
-
-
-
 }
 
 span:nth-of-type(2)::after {
@@ -212,6 +208,7 @@ span:nth-of-type(2)::after {
 	position: absolute;
 	bottom: 5em;
 	left: 8em;
+	z-index: 1;
 
 	/* shape */
 	border-top-right-radius: var(--border-radius-size);
@@ -221,108 +218,109 @@ span:nth-of-type(2)::after {
 
 	/* color */
 	background-color: var(--color-i);
-
-	/* sizes */
-	width: var(--width-letter);	
-	height: var(--height-letter);
-
-
 }
 
 /* CODE FOR "G" */
 
 span:nth-of-type(3) {
+	/* position */
 	position: relative;
-
+	z-index: 0;
+	
 	/* shape */
 	border-top-left-radius: var(--border-radius-size);
-	border-bottom-left-radius: var(--border-radius-size);
-  
+  	border-bottom-left-radius: var(--border-radius-size);
+
 	/* color */
-	background-color: var(--color-g);
-	color: transparent;
-
-	/* sizes */
-	width: 	var(--width-letter);
-  	height: var(--height-letter);
-
+	color: transparent;	
+	background-color: var(--color-g-shadow);
+	box-shadow: inset 0.25em 0.2em 0.15em var(--color-g-deepte);
 }
 
 span:nth-of-type(3)::after {
+	/* position */
 	position: absolute;
-	inset: 0;
+	bottom: 1em;
+	left: 14em;
+	z-index: 1;
+
 	/* shape */
 	border-top-left-radius: var(--border-radius-size);
   	border-bottom-left-radius: var(--border-radius-size);
 
 	content: '';
-	background-color: var(--color-g-shadow);
-	box-shadow: inset 0.25em 0.2em 0.15em var(--color-g-deepte);
 
+	/* color */
+	background-color: var(--color-g);
 }
 
 /* CODE FOR "M" */
 
 span:nth-of-type(4) {
+	/* position */
 	position: relative;
-
+	z-index: 0;
+	
 	/* shape */
 	border-radius: var(--border-radius-size);
 
 	/* color */
-	background-color: var(--color-m);
-	color: transparent;
-
-	/* sizes */
-	width: 	var(--width-letter);
-  	height: var(--height-letter);
-
+	color: transparent;	
+	background-color: var(--color-m-shadow);
+	box-shadow: inset 0.25em 0.2em 0.15em var(--color-m-deepte);
 }
 
 span:nth-of-type(4)::after {
+	/* position */
 	position: absolute;
-	inset: 0;
+	bottom: 6em;
+	left: -10em;
+	z-index: 1;
+
 	/* shape */
-		border-radius: var(--border-radius-size);
+	border-radius: var(--border-radius-size);
 
 	content: '';
-	background-color: var(--color-m-shadow);
-	box-shadow: inset 0.25em 0.2em 0.15em var(--color-m-deepte);
 
+	/* color */
+	background-color: var(--color-m);
 }
 
 /* CODE FOR "A" */
 
 span:nth-of-type(5) {
+	/* position */
 	position: relative;
+	z-index: 0;
+	
 	/* shape */
 	border-top-left-radius: var(--border-radius-size);
 	border-bottom-left-radius: var(--border-radius-size);
 	border-bottom-right-radius: var(--border-radius-size);
 
 	/* color */
-	background-color: var(--color-a);
-	color: transparent;
-
-	/* sizes */
-	width: 	var(--width-letter);
-  	height: var(--height-letter);
-
+	color: transparent;	
+	background-color: var(--color-a-shadow);
+	box-shadow: inset 0.25em 0.2em 0.15em var(--color-a-deepte);
 }
 
 
-/* DE CONTENT MET SPATIE NIET MOGELIJK TE ZIEN */
 span:nth-of-type(5)::after {
+	/* position */
 	position: absolute;
-	inset: 0;
+	bottom: -3em;
+	left: 10em;
+	z-index: 1;
+
 	/* shape */
 	border-top-left-radius: var(--border-radius-size);
 	border-bottom-left-radius: var(--border-radius-size);
 	border-bottom-right-radius: var(--border-radius-size);
-
+	
 	content: '';
-	background-color: var(--color-a-shadow);
-	box-shadow: inset 0.25em 0.2em 0.15em var(--color-a-deepte);
+
+	/* color */
+	background-color: var(--color-a);
 
 }
 
