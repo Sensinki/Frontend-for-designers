@@ -56,21 +56,51 @@ button:not(:disabled), summary {
 	--color-m-deepte: #0b3e52;
 	--color-a-deepte: #05432b;
 
-
+	--color-background: linear-gradient(135deg, rgba(255,203,47,1) 23%, rgb(255, 221, 121) 60%, rgba(255,228,148,1) 100%);
 
 	/* sizes */
 	--width-letter: 4em;
 	--height-letter: 4em;
 	--border-radius-size: 2em;
-
-	
-
 }
 
 
 /*********/
 /* MEDIA */
 /*********/
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* color */
+		--color-black: #111;
+		--color-white: #eee;
+		--color-f: #F24E1E;
+		--color-i: #FF7262;
+		--color-g: #A259FF;
+		--color-m: #1ABCFE;
+		--color-a: #0ACF83;
+
+		--color-f-shadow: #c03b13;
+		--color-i-shadow: #c45548;
+		--color-g-shadow: #6637a2;
+		--color-m-shadow: #12749b;
+		--color-a-shadow: #098858;
+
+		--color-f-deepte: #3d1205;
+		--color-i-deepte: #560e07;
+		--color-g-deepte: #24133a;
+		--color-m-deepte: #062733;
+		--color-a-deepte: #032e1e;
+
+		--color-background: linear-gradient(135deg, rgb(106, 58, 0) 37%, rgba(129,77,15,1) 60%, rgba(199,135,60,1) 100%);
+
+    }
+
+    h1 {
+        filter: brightness(90%);
+    }
+}
 
 @media (prefers-reduced-motion: reduce) {
 	body {
@@ -89,8 +119,6 @@ button:not(:disabled), summary {
 }
 
 body {
-	font-family: eenfont, sans-serif;
-	
 	/* display */
 	display: flex;
  	justify-content: center;
@@ -98,12 +126,16 @@ body {
 
 	/* color */
  	color: var(--color-text);
- 	background-color: var(--color-background);
+	background: rgb(85,47,2);
+	background: var(--color-background);
 
 	/* sizes */
  	width: 100vw;
 	height: 100vh;
 	font-size: 2vmin;
+
+	/* text */
+	font-family: eenfont, sans-serif;
 }
 
 /* jouw code */
@@ -143,7 +175,8 @@ span:nth-of-type(1) {
 	/* color */
 	color: transparent;
 	background-color: var(--color-f);
-	box-shadow: inset 0.25em 0.2em 0.15em var(--color-i-deepte);
+	box-shadow: inset 0.25em 0.2em 0.15em var(--color-f-deepte);
+	filter: drop-shadow(0em .25em .2em var(--color-f-deepte));
 
 }
 
@@ -162,29 +195,48 @@ span:nth-of-type(1)::after {
 
 	/* color */
 	background-color: var(--color-f);
+	filter: drop-shadow(.2em .05em .1em var(--color-f-deepte));
+
 }
 
-/* body {
-	
-	animation-name: princess;
-  	animation-duration: 3s;
-  	animation-iteration-count: infinite;
+body:hover span:nth-of-type(1)::after{
+	animation-name: f-letter;
+  	animation-duration: 5s;
+	animation-fill-mode: forwards;
+	animation-delay: 1s;
+	/* animation-iteration-count: infinite; */
 }
 
-@keyframes princess {
+@keyframes f-letter {
   0% {
-    transform: translateY(0);
+    transform: translate(0);
     animation-timing-function: ease-out;
   }
-  50% {
-    transform: translateY(-100%);
+  17% {
+    transform: translate(1.7em, -4em);
+    animation-timing-function: ease-in;
+  }
+  34% {
+    transform: translate(3.4em, -2em);
+	animation-timing-function: ease-out;
+  }
+  51% {
+    transform: translate(5.1em, -6em);
+    animation-timing-function: ease-in;
+  }
+  68% {
+    transform: translate(6.8em, -4em);
+	animation-timing-function: ease-out;
+  }
+  85% {
+    transform: translate(8.5em, -8em);
     animation-timing-function: ease-in;
   }
   100% {
-    transform: translateY(0);
+    transform: translate(10em, -6em);
+	animation-timing-function: ease-out;
   }
-} */
-
+}
 
 /* CODE FOR "I" */
 
@@ -201,6 +253,8 @@ span:nth-of-type(2) {
 	color: transparent;	
 	background-color: var(--color-i-shadow);
 	box-shadow: inset 0.25em 0.2em 0.15em var(--color-i-deepte);
+	filter: drop-shadow(0em .25em .2em var(--color-i-deepte));
+
 }
 
 span:nth-of-type(2)::after {
@@ -218,6 +272,48 @@ span:nth-of-type(2)::after {
 
 	/* color */
 	background-color: var(--color-i);
+	filter: drop-shadow(.2em .05em .1em var(--color-i-deepte));
+
+}
+
+/* animation for i shape */
+body:hover span:nth-of-type(2)::after{
+	animation-name: i-shape;
+  	animation-duration: 5s;
+	animation-fill-mode: forwards;
+	animation-delay: 3s;
+	/* animation-iteration-count: infinite; */
+}
+
+@keyframes i-shape  {
+  0% {
+    transform: translate(0);
+    animation-timing-function: ease-out;
+  }
+  17% {
+    transform: translate(1.7em, -4em);
+    animation-timing-function: ease-in;
+  }
+  34% {
+    transform: translate(3.4em, -2em);
+	animation-timing-function: ease-out;
+  }
+  51% {
+    transform: translate(5.1em, -6em);
+    animation-timing-function: ease-in;
+  }
+  68% {
+    transform: translate(6.8em, -4em);
+	animation-timing-function: ease-out;
+  }
+  85% {
+    transform: translate(8.5em, -8em);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translate(10em, -6em);
+	animation-timing-function: ease-out;
+  }
 }
 
 /* CODE FOR "G" */
@@ -235,6 +331,7 @@ span:nth-of-type(3) {
 	color: transparent;	
 	background-color: var(--color-g-shadow);
 	box-shadow: inset 0.25em 0.2em 0.15em var(--color-g-deepte);
+	filter: drop-shadow(0em .25em .2em var(--color-g-deepte));
 }
 
 span:nth-of-type(3)::after {
@@ -252,6 +349,47 @@ span:nth-of-type(3)::after {
 
 	/* color */
 	background-color: var(--color-g);
+	filter: drop-shadow(.2em .05em .1em var(--color-g-deepte));
+}
+
+/* animation for g shape */
+body:hover span:nth-of-type(3)::after{
+	animation-name: g-shape;
+  	animation-duration: 5s;
+	animation-fill-mode: forwards;
+	animation-delay: 2s;
+	/* animation-iteration-count: infinite; */
+}
+
+@keyframes g-shape  {
+  0% {
+    transform: translate(0);
+    animation-timing-function: ease-out;
+  }
+  17% {
+    transform: translate(1.7em, -4em);
+    animation-timing-function: ease-in;
+  }
+  34% {
+    transform: translate(3.4em, -2em);
+	animation-timing-function: ease-out;
+  }
+  51% {
+    transform: translate(5.1em, -6em);
+    animation-timing-function: ease-in;
+  }
+  68% {
+    transform: translate(6.8em, -4em);
+	animation-timing-function: ease-out;
+  }
+  85% {
+    transform: translate(8.5em, -8em);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translate(10em, -6em);
+	animation-timing-function: ease-out;
+  }
 }
 
 /* CODE FOR "M" */
@@ -268,6 +406,7 @@ span:nth-of-type(4) {
 	color: transparent;	
 	background-color: var(--color-m-shadow);
 	box-shadow: inset 0.25em 0.2em 0.15em var(--color-m-deepte);
+	filter: drop-shadow(0em .25em .2em var(--color-m-deepte));
 }
 
 span:nth-of-type(4)::after {
@@ -284,6 +423,47 @@ span:nth-of-type(4)::after {
 
 	/* color */
 	background-color: var(--color-m);
+	filter: drop-shadow(.2em .05em .1em var(--color-m-deepte));
+}
+
+/* animation for m shape */
+body:hover span:nth-of-type(4)::after{
+	animation-name: m-shape;
+  	animation-duration: 5s;
+	animation-fill-mode: forwards;
+	animation-delay: 2s;
+	/* animation-iteration-count: infinite; */
+}
+
+@keyframes m-shape  {
+  0% {
+    transform: translate(0);
+    animation-timing-function: ease-out;
+  }
+  17% {
+    transform: translate(1.7em, -4em);
+    animation-timing-function: ease-in;
+  }
+  34% {
+    transform: translate(3.4em, -2em);
+	animation-timing-function: ease-out;
+  }
+  51% {
+    transform: translate(5.1em, -6em);
+    animation-timing-function: ease-in;
+  }
+  68% {
+    transform: translate(6.8em, -4em);
+	animation-timing-function: ease-out;
+  }
+  85% {
+    transform: translate(8.5em, -8em);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translate(10em, -6em);
+	animation-timing-function: ease-out;
+  }
 }
 
 /* CODE FOR "A" */
@@ -302,6 +482,7 @@ span:nth-of-type(5) {
 	color: transparent;	
 	background-color: var(--color-a-shadow);
 	box-shadow: inset 0.25em 0.2em 0.15em var(--color-a-deepte);
+	filter: drop-shadow(0em .25em .2em var(--color-a-deepte));
 }
 
 
@@ -321,6 +502,45 @@ span:nth-of-type(5)::after {
 
 	/* color */
 	background-color: var(--color-a);
-
+	filter: drop-shadow(.2em .05em .1em var(--color-a-deepte));
 }
 
+/* animation for a shape */
+body:hover span:nth-of-type(5)::after{
+	animation-name: a-shape;
+  	animation-duration: 5s;
+	animation-fill-mode: forwards;
+	animation-delay: 3s;
+	/* animation-iteration-count: infinite; */
+}
+
+@keyframes a-shape  {
+  0% {
+    transform: translate(0);
+    animation-timing-function: ease-out;
+  }
+  17% {
+    transform: translate(1.7em, -4em);
+    animation-timing-function: ease-in;
+  }
+  34% {
+    transform: translate(3.4em, -2em);
+	animation-timing-function: ease-out;
+  }
+  51% {
+    transform: translate(5.1em, -6em);
+    animation-timing-function: ease-in;
+  }
+  68% {
+    transform: translate(6.8em, -4em);
+	animation-timing-function: ease-out;
+  }
+  85% {
+    transform: translate(8.5em, -8em);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translate(10em, -6em);
+	animation-timing-function: ease-out;
+  }
+}
