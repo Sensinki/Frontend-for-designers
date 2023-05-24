@@ -15,8 +15,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Bronnenlijst
 
 ### Opdracht 1 
-  1. Figma logo size css: https://codepen.io/moshfequr9/pen/ZjyeZj
-  2. Figma trademark guideline: https://www.figma.com/using-the-figma-brand/#:~:text=Figma%20Marks&text=For%20instance%2C%20the%20name%20and,of%20our%20most%20important%20assets.
+  1. [Figma logo size css] (https://codepen.io/moshfequr9/pen/ZjyeZj)
+  2. [Figma trademark guideline] (https://www.figma.com/using-the-figmabrand/#:~:text=Figma%20Marks&text=For%20instance%2C%20the%20name%20and,of%20our%20most%20important%20assets.)
   3. -...-
 
 ### Opdracht 2 
