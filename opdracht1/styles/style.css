@@ -6,7 +6,16 @@
 @font-face {
 	font-family: 'eenfont';
 	src: url('../fonts/eenfont.woff2') format('woff2'),
-			 url('../fonts/eenfont.woff') format('woff');
+		 url('../fonts/eenfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'whyte-inktrap';
+	src: url('../fonts/whyte-inktrap/WhyteInktrap-Black.woff2') format('woff2'),
+		 url('../fonts/whyte-inktrap/WhyteInktrap-Black.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 
@@ -174,7 +183,7 @@ span:nth-of-type(1) {
 
 	/* color */
 	color: transparent;
-	background-color: var(--color-f);
+	background: var(--color-f);
 	box-shadow: inset 0.25em 0.2em 0.15em var(--color-f-deepte);
 	filter: drop-shadow(0em .25em .2em var(--color-f-deepte));
 
@@ -194,46 +203,153 @@ span:nth-of-type(1)::after {
 	content: '';
 
 	/* color */
-	background-color: var(--color-f);
+	background: var(--color-f);
 	filter: drop-shadow(.2em .05em .1em var(--color-f-deepte));
 
 }
 
+/* animation for f shape */
 body:hover span:nth-of-type(1)::after{
 	animation-name: f-letter;
-  	animation-duration: 5s;
+  	animation-duration: 6s;
 	animation-fill-mode: forwards;
 	animation-delay: 1s;
 	/* animation-iteration-count: infinite; */
 }
 
+span:nth-of-type(1)::before {
+	/* display */
+	overflow: hidden;
+
+	/* position */
+	position: absolute;
+	bottom: -6em;
+	left: 5em;
+	z-index: 1;
+
+	/* text */
+	content: 'F';
+	font-family: 'whyte-inktrap';
+
+	/* sizes */
+	width: 0;
+	height: 0;
+
+	/* color */
+	color: var(--color-i-deepte);
+	filter: drop-shadow(0em .05em .04em var(--color-white));
+}
+
+/* animation for name */
+body:hover span:nth-of-type(1)::before{
+	animation-name: cssAnimation;
+  	animation-duration: 21s;
+	animation-fill-mode: forwards;
+	animation-delay: .75s;
+}
+
 @keyframes f-letter {
   0% {
-    transform: translate(0);
+    transform: translate(0) rotate(0) scaleY(1);
+    animation-timing-function: linear;
+  }
+  .5% {
+	transform: rotate(5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;  
+  }
+  1% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  1.5% {
+	transform: rotate(-5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  2% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  2.5% {
+	transform: rotate(5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  3% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  3.5% {
+	transform: rotate(-5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  4% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  4.5% {
+	transform: rotate(5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  5% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  5.5% {
+	transform: rotate(-5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  6% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  6.5% {
+	transform: rotate(5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  7% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  7.5% {
+	transform: rotate(-5deg);
+    transform-origin: 50% 100%;
     animation-timing-function: ease-out;
   }
   17% {
-    transform: translate(1.7em, -4em);
+    transform: translate(1.7em, -4em) scaleY(1.1);
     animation-timing-function: ease-in;
   }
   34% {
-    transform: translate(3.4em, -2em);
+    transform: translate(3.4em, -2em) scaleY(.6);
 	animation-timing-function: ease-out;
   }
   51% {
-    transform: translate(5.1em, -6em);
+    transform: translate(5.1em, -6em) scaleY(1.1);
     animation-timing-function: ease-in;
   }
   68% {
-    transform: translate(6.8em, -4em);
+    transform: translate(6.8em, -4em) scaleY(.6);
 	animation-timing-function: ease-out;
   }
   85% {
-    transform: translate(8.5em, -8em);
+    transform: translate(8.5em, -8em) scaleY(1.2);
     animation-timing-function: ease-in;
   }
   100% {
-    transform: translate(10em, -6em);
+    transform: translate(10em, -6em) scaleY(1);
 	animation-timing-function: ease-out;
   }
 }
@@ -251,7 +367,7 @@ span:nth-of-type(2) {
 
 	/* color */
 	color: transparent;	
-	background-color: var(--color-i-shadow);
+	background: var(--color-i-shadow);
 	box-shadow: inset 0.25em 0.2em 0.15em var(--color-i-deepte);
 	filter: drop-shadow(0em .25em .2em var(--color-i-deepte));
 
@@ -271,7 +387,7 @@ span:nth-of-type(2)::after {
 	content: '';
 
 	/* color */
-	background-color: var(--color-i);
+	background: var(--color-i);
 	filter: drop-shadow(.2em .05em .1em var(--color-i-deepte));
 
 }
@@ -279,39 +395,146 @@ span:nth-of-type(2)::after {
 /* animation for i shape */
 body:hover span:nth-of-type(2)::after{
 	animation-name: i-shape;
-  	animation-duration: 5s;
+  	animation-duration: 6s;
 	animation-fill-mode: forwards;
-	animation-delay: 3s;
+	animation-delay: .5s;
 	/* animation-iteration-count: infinite; */
+}
+
+span:nth-of-type(2)::before {
+	/* display */
+	overflow: hidden;
+
+	/* position */
+	position: absolute;
+	bottom: -6em;
+	left: 2em;
+	z-index: 1;
+
+	/* text */
+	content: 'I';
+	font-family: 'whyte-inktrap';
+
+
+	/* sizes */
+	width: 0;
+	height: 0;
+
+	/* color */
+	color: var(--color-i-deepte);
+	filter: drop-shadow(0em .05em .04em var(--color-white));
+}
+
+/* animation for name */
+body:hover span:nth-of-type(2)::before{
+	animation-name: cssAnimation;
+  	animation-duration: 22s;
+	animation-fill-mode: forwards;
+	animation-delay: .75s;
 }
 
 @keyframes i-shape  {
   0% {
-    transform: translate(0);
+    transform: translate(0) rotate(0) scaleY(1);
+    animation-timing-function: linear;
+  }
+  .5% {
+	transform: rotate(5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;  
+  }
+  1% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  1.5% {
+	transform: rotate(-5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  2% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  2.5% {
+	transform: rotate(5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  3% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  3.5% {
+	transform: rotate(-5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  4% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  4.5% {
+	transform: rotate(5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  5% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  5.5% {
+	transform: rotate(-5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  6% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  6.5% {
+	transform: rotate(5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  7% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  7.5% {
+	transform: rotate(-5deg);
+    transform-origin: 50% 100%;
     animation-timing-function: ease-out;
   }
   17% {
-    transform: translate(1.7em, -4em);
+    transform: translate(-1.5em, -2em) scaleY(1.1);
     animation-timing-function: ease-in;
   }
   34% {
-    transform: translate(3.4em, -2em);
+    transform: translate(-3em, 2em) scaleY(.6);
 	animation-timing-function: ease-out;
   }
   51% {
-    transform: translate(5.1em, -6em);
+    transform: translate(-4.5em, 0em) scaleY(1.1);
     animation-timing-function: ease-in;
   }
   68% {
-    transform: translate(6.8em, -4em);
+    transform: translate(-6em, 5em) scaleY(.6);
 	animation-timing-function: ease-out;
   }
   85% {
-    transform: translate(8.5em, -8em);
+    transform: translate(-7em, 2em) scaleY(1.2);
     animation-timing-function: ease-in;
   }
   100% {
-    transform: translate(10em, -6em);
+    transform: translate(-8em, 5em) scaleY(1);
 	animation-timing-function: ease-out;
   }
 }
@@ -329,7 +552,7 @@ span:nth-of-type(3) {
 
 	/* color */
 	color: transparent;	
-	background-color: var(--color-g-shadow);
+	background: var(--color-g-shadow);
 	box-shadow: inset 0.25em 0.2em 0.15em var(--color-g-deepte);
 	filter: drop-shadow(0em .25em .2em var(--color-g-deepte));
 }
@@ -348,46 +571,159 @@ span:nth-of-type(3)::after {
 	content: '';
 
 	/* color */
-	background-color: var(--color-g);
+	background: var(--color-g);
 	filter: drop-shadow(.2em .05em .1em var(--color-g-deepte));
 }
 
 /* animation for g shape */
 body:hover span:nth-of-type(3)::after{
 	animation-name: g-shape;
-  	animation-duration: 5s;
+  	animation-duration: 6s;
 	animation-fill-mode: forwards;
-	animation-delay: 2s;
+	animation-delay: .75s;
 	/* animation-iteration-count: infinite; */
+}
+
+span:nth-of-type(3)::before {
+	/* display */
+	overflow: hidden;
+
+	/* position */
+	position: absolute;
+	bottom: -2em;
+	left: 6.7em;
+	z-index: 1;
+
+	/* text */
+	content: 'G';
+	font-family: 'whyte-inktrap';
+
+	/* sizes */
+	width: 0;
+	height: 0;
+
+	/* color */
+	color: var(--color-i-deepte);
+	filter: drop-shadow(0em .05em .04em var(--color-white));
+
+}
+
+/* animation for name */
+body:hover span:nth-of-type(3)::before{
+	animation-name: cssAnimation;
+  	animation-duration: 23s;
+	animation-fill-mode: forwards;
+	animation-delay: .75s;
+}
+
+@keyframes cssAnimation {
+    to {
+        overflow: visible;
+    }
 }
 
 @keyframes g-shape  {
   0% {
-    transform: translate(0);
+    transform: translate(0) rotate(0) scaleY(1);
+    animation-timing-function: linear;
+  }
+  .5% {
+	transform: rotate(5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;  
+  }
+  1% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  1.5% {
+	transform: rotate(-5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  2% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  2.5% {
+	transform: rotate(5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  3% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  3.5% {
+	transform: rotate(-5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  4% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  4.5% {
+	transform: rotate(5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  5% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  5.5% {
+	transform: rotate(-5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  6% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  6.5% {
+	transform: rotate(5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  7% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  7.5% {
+	transform: rotate(-5deg);
+    transform-origin: 50% 100%;
     animation-timing-function: ease-out;
   }
   17% {
-    transform: translate(1.7em, -4em);
+    transform: translate(-2.3em, -3em) scaleY(1.1);
     animation-timing-function: ease-in;
   }
   34% {
-    transform: translate(3.4em, -2em);
+    transform: translate(-4.6em, 1em) scaleY(.6);
 	animation-timing-function: ease-out;
   }
   51% {
-    transform: translate(5.1em, -6em);
+    transform: translate(-6.9em, -3em) scaleY(1.1);
     animation-timing-function: ease-in;
   }
   68% {
-    transform: translate(6.8em, -4em);
+    transform: translate(-9.2em, 2em) scaleY(.6);
 	animation-timing-function: ease-out;
   }
   85% {
-    transform: translate(8.5em, -8em);
+    transform: translate(-11.5em, -2em) scaleY(1.2);
     animation-timing-function: ease-in;
   }
   100% {
-    transform: translate(10em, -6em);
+    transform: translate(-14em, 1em) scaleY(1);
 	animation-timing-function: ease-out;
   }
 }
@@ -404,7 +740,7 @@ span:nth-of-type(4) {
 
 	/* color */
 	color: transparent;	
-	background-color: var(--color-m-shadow);
+	background: var(--color-m-shadow);
 	box-shadow: inset 0.25em 0.2em 0.15em var(--color-m-deepte);
 	filter: drop-shadow(0em .25em .2em var(--color-m-deepte));
 }
@@ -422,46 +758,153 @@ span:nth-of-type(4)::after {
 	content: '';
 
 	/* color */
-	background-color: var(--color-m);
+	background: var(--color-m);
 	filter: drop-shadow(.2em .05em .1em var(--color-m-deepte));
 }
 
 /* animation for m shape */
 body:hover span:nth-of-type(4)::after{
 	animation-name: m-shape;
-  	animation-duration: 5s;
+  	animation-duration: 6s;
 	animation-fill-mode: forwards;
-	animation-delay: 2s;
+	transform-origin: top;
+	animation-delay: .5s;
 	/* animation-iteration-count: infinite; */
+}
+
+span:nth-of-type(4)::before {
+	/* display */
+	overflow: hidden;
+
+	/* position */
+	position: absolute;
+	bottom: -2em;
+	left: 3.75em;
+	z-index: 1;
+
+	/* text */
+	content: 'M';
+	font-family: 'whyte-inktrap';
+
+	/* sizes */
+	width: 0;
+	height: 0;
+
+	/* color */
+	color: var(--color-i-deepte);
+	filter: drop-shadow(0em .05em .04em var(--color-white));
+}
+
+/* animation for name */
+body:hover span:nth-of-type(4)::before{
+	animation-name: cssAnimation;
+  	animation-duration: 24s;
+	animation-fill-mode: forwards;
+	animation-delay: .75s;
 }
 
 @keyframes m-shape  {
   0% {
-    transform: translate(0);
+    transform: translate(0) rotate(0) scaleY(1);
+    animation-timing-function: linear;
+  }
+  .5% {
+	transform: rotate(5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;  
+  }
+  1% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  1.5% {
+	transform: rotate(-5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  2% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  2.5% {
+	transform: rotate(5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  3% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  3.5% {
+	transform: rotate(-5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  4% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  4.5% {
+	transform: rotate(5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  5% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  5.5% {
+	transform: rotate(-5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  6% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  6.5% {
+	transform: rotate(5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  7% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  7.5% {
+	transform: rotate(-5deg);
+    transform-origin: 50% 100%;
     animation-timing-function: ease-out;
   }
   17% {
-    transform: translate(1.7em, -4em);
+    transform: translate(1.7em, -2em) scaleY(1.1);
     animation-timing-function: ease-in;
   }
   34% {
-    transform: translate(3.4em, -2em);
+    transform: translate(3.4em, 2em) scaleY(.6);
 	animation-timing-function: ease-out;
   }
   51% {
-    transform: translate(5.1em, -6em);
+    transform: translate(5.1em, 0em) scaleY(1.1);
     animation-timing-function: ease-in;
   }
   68% {
-    transform: translate(6.8em, -4em);
+    transform: translate(6.8em, 4em) scaleY(.6);;
 	animation-timing-function: ease-out;
   }
   85% {
-    transform: translate(8.5em, -8em);
+    transform: translate(8.5em, 2em) scaleY(1.2);
     animation-timing-function: ease-in;
   }
   100% {
-    transform: translate(10em, -6em);
+    transform: translate(10em, 6em) scaleY(1);
 	animation-timing-function: ease-out;
   }
 }
@@ -480,7 +923,7 @@ span:nth-of-type(5) {
 
 	/* color */
 	color: transparent;	
-	background-color: var(--color-a-shadow);
+	background: var(--color-a-shadow);
 	box-shadow: inset 0.25em 0.2em 0.15em var(--color-a-deepte);
 	filter: drop-shadow(0em .25em .2em var(--color-a-deepte));
 }
@@ -501,46 +944,153 @@ span:nth-of-type(5)::after {
 	content: '';
 
 	/* color */
-	background-color: var(--color-a);
+	background: var(--color-a);
 	filter: drop-shadow(.2em .05em .1em var(--color-a-deepte));
 }
 
 /* animation for a shape */
 body:hover span:nth-of-type(5)::after{
 	animation-name: a-shape;
-  	animation-duration: 5s;
+  	animation-duration: 6s;
 	animation-fill-mode: forwards;
-	animation-delay: 3s;
+	animation-delay: .4s;
 	/* animation-iteration-count: infinite; */
+}
+
+/* animation for name */
+span:nth-of-type(5)::before {
+	/* display */
+	overflow: hidden;
+
+	/* position */
+	position: absolute;
+	bottom: 2em;
+	left: 9em;
+	z-index: 1;
+
+	/* text */
+	content: 'A';
+	font-family: 'whyte-inktrap';
+
+	/* sizes */
+	width: 0;
+	height: 0;
+
+	/* color */
+	color: var(--color-i-deepte);	
+	filter: drop-shadow(0em .05em .04em var(--color-white));
+
+}
+
+body:hover span:nth-of-type(5)::before{
+	animation-name: cssAnimation;
+  	animation-duration: 25s;
+	animation-fill-mode: forwards;
+	animation-delay: .75s;
 }
 
 @keyframes a-shape  {
   0% {
-    transform: translate(0);
+    transform: translate(0) rotate(0) scaleY(1);
+    animation-timing-function: linear;
+  }
+  .5% {
+	transform: rotate(5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;  
+  }
+  1% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  1.5% {
+	transform: rotate(-5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  2% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  2.5% {
+	transform: rotate(5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  3% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  3.5% {
+	transform: rotate(-5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  4% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  4.5% {
+	transform: rotate(5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  5% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  5.5% {
+	transform: rotate(-5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  6% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  6.5% {
+	transform: rotate(5deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  7% {
+	transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+  }
+  7.5% {
+	transform: rotate(-5deg);
+    transform-origin: 50% 100%;
     animation-timing-function: ease-out;
   }
   17% {
-    transform: translate(1.7em, -4em);
+    transform: translate(-1.7em, -3em) scaleY(1.1);
     animation-timing-function: ease-in;
   }
   34% {
-    transform: translate(3.4em, -2em);
+    transform: translate(-3.4em, -1em) scaleY(.6);
 	animation-timing-function: ease-out;
   }
   51% {
-    transform: translate(5.1em, -6em);
+    transform: translate(-5.1em, -4em) scaleY(1.1);
     animation-timing-function: ease-in;
   }
   68% {
-    transform: translate(6.8em, -4em);
+    transform: translate(-6.8em, -2em) scaleY(.6);
 	animation-timing-function: ease-out;
   }
   85% {
-    transform: translate(8.5em, -8em);
+    transform: translate(-8.5em, -5em) scaleY(1.2);
     animation-timing-function: ease-in;
   }
   100% {
-    transform: translate(10em, -6em);
+    transform: translate(-10em, -3em) scaleY(1);
 	animation-timing-function: ease-out;
   }
 }
