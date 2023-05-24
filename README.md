@@ -17,9 +17,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ### Opdracht 1 
   1. [Figma logo size css](https://codepen.io/moshfequr9/pen/ZjyeZj)
   2. [Figma trademark guideline](https://www.figma.com/using-the-figmabrand/#:~:text=Figma%20Marks&text=For%20instance%2C%20the%20name%20and,of%20our%20most%20important%20assets.)
-  3. []()
-  4. []()
-  5. []()
+  3. [Whyte Intrap font](https://fontshub.pro/font/whyte-inktrap-download)
+  4. [Hide an element](https://stackoverflow.com/questions/21993661/css-auto-hide-elements-after-5-seconds)
+  5. [Transform property](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
+  6. [Shadow to an ::after || :: before element](https://stackoverflow.com/questions/28033616/adding-box-shadow-to-a-after-pseudo-element)
+  7. [Gradient generator](https://cssgradient.io/)
+  8. [Prefers Reduced Motion](https://web.dev/prefers-reduced-motion/#:~:text=The%20media%20query%20prefers%2Dreduced,in%20the%20underlying%20operating%20system.)
 
 ### Opdracht 2 
   1. -bron 1-
