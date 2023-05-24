@@ -38,7 +38,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je storyboard:
-  <img src="readme-images/figma-storyboard.png" style="transform:rotate(90deg);" alt="storyboard voor opdracht 1">
+  <img src="readme-images/storyboard.png" alt="storyboard voor opdracht 1">
 
 
   ### Je ambitie: 
@@ -60,7 +60,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/light-mode.png" height="300px" alt="uitomst opdracht 1 - light mode">
+  <img src="readme-images/light-done.png" height="300px" alt="uitomst opdracht 1 - light">
+  <img src="readme-images/dark-mode.png" height="300px" alt="uitomst opdracht 1 - dark mode">
+  <img src="readme-images/dark-done.png" height="300px" alt="uitomst opdracht 1 - dark">
+
+
 
 
   ### Dit ging goed/Heb ik geleerd: 
