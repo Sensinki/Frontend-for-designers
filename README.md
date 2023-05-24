@@ -38,7 +38,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je storyboard:
-  <img src="readme-images/figma-storyboard.png" alt="storyboard voor opdracht 1">
+  <img src="readme-images/figma-storyboard.png" style="transform:rotate(90deg);" alt="storyboard voor opdracht 1">
 
 
   ### Je ambitie: 
