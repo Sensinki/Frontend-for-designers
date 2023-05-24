@@ -85,7 +85,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatje(s)
   
-  - Kleuren zijn erg belangrijk voor contrast
+  - Kleuren zijn erg belangrijk voor contrast, er waren te veel kleuren waardoor het moeilijk was om contrast aan te brengen
   - Ik vind gebruiken van de z-index property lastig. Elementen die op de grond moet blijven zijn niet op de ground, andere elementen komen vóór het elemnt, zoals in de foto te zien.
   - Heel veel rekening heb ik gedaan tijdens procenten deel van de animaties
   
