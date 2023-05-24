@@ -38,15 +38,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je storyboard:
-  <img src="readme-images/dummy-plaatje alt="storyboard voor opdracht 1">
+  <img src="readme-images/figma-storyboard.png" alt="storyboard voor opdracht 1">
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Professionele animaties kunnen maken
+  - Gemakkelijk te spelen met de elementen
+  - Dark mode aanpassen
+  - Proberen responsieve schermen te maken
+
  
 </details>
 
