@@ -1,2 +1,5 @@
 // JavaScript Document
-console.log("howdy");
+console.log("hi there");
+
+// check for heart (liking)
+// https://codepen.io/sensinki/pen/PoxodYR
