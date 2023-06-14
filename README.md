@@ -38,7 +38,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je storyboard:
-  <img src="readme-images/figma-storyboard.png" style="transform:rotate(90deg);" alt="storyboard voor opdracht 1">
+  <img src="readme-images/storyboard.png" alt="storyboard voor opdracht 1">
 
 
   ### Je ambitie: 
@@ -60,19 +60,36 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/light-mode.png" height="250px" alt="uitomst opdracht 1 - light mode">
+  <img src="readme-images/light-done.png" height="250px" alt="uitomst opdracht 1 - light">
+  <img src="readme-images/dark-mode.png" height="250px" alt="uitomst opdracht 1 - dark mode">
+  <img src="readme-images/dark-done.png" height="250px" alt="uitomst opdracht 1 - dark">
 
 
-  ### Dit ging goed/Heb ik geleerd: 
+  ### Dit ging goed/Heb ik geleerd:
   Korte omschrijving met plaatje(s)
+  
+  - Custom properties
+  - Dark/light-mode ging gewoon goed.
+  - Reduced motion was makkelijker dan ik dacht
+  - @font-face lijkt me heel makkelijk 
+  - 2 animatie maken in een @keyframe
+  - Manipuleren van ::after en ::before was makkelijker dan ik dacht
+  - Elementen hidden krijgen
+  - Verschillende shadow opties
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
+  <img src="readme-images/light-done.png" height="300px" alt="uitomst opdracht 1 - light">
+  <img src="readme-images/dark-done.png" height="300px" alt="uitomst opdracht 1 - dark">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatje(s)
-
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
+  
+  - Kleuren zijn erg belangrijk voor contrast, er waren te veel kleuren waardoor het moeilijk was om contrast aan te brengen
+  - Ik vind gebruiken van de z-index property lastig. Elementen die op de grond moet blijven zijn niet op de ground, andere elementen komen vóór het elemnt, zoals in de foto te zien.
+  - Heel veel rekening heb ik gedaan tijdens procenten deel van de animaties
+  
+  <img src="readme-images/z-index.png" height="300px" alt="z-index fout">
 </details>
 
 
