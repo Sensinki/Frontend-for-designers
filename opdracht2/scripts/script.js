@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // LOCAL STORAGE
+// got help from chatGPT
 let likedSongs = [];
 
 function handleLike(event) {

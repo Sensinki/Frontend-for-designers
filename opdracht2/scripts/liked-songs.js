@@ -1,4 +1,5 @@
-// // // LOCAL STORAGE
+// LOCAL STORAGE
+// got help from chatGPT
 document.addEventListener("DOMContentLoaded", function () {
     const likedSongsList = document.getElementById("likedSongsList");
     const likedSongs = JSON.parse(localStorage.getItem("likedHearts")) || [];
@@ -29,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // SORT
+    // got help from Sanne's code
     function sortSongs(option) {
         const songItems = Array.from(likedSongsList.getElementsByTagName("li"));
         songItems.sort((a, b) => {
@@ -110,6 +112,7 @@ function performSearch() {
         const songName = songItem.querySelector("h2").textContent.toLowerCase();
         const artistName = songItem.querySelector("h3").textContent.toLowerCase();
 
+        // got help from chatGPT
         if (songName.includes(query) || artistName.includes(query)) {
             songItem.style.display = "grid";
         } else {
