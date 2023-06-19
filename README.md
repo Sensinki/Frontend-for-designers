@@ -25,9 +25,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   8. [Prefers Reduced Motion](https://web.dev/prefers-reduced-motion/#:~:text=The%20media%20query%20prefers%2Dreduced,in%20the%20underlying%20operating%20system.)
 
 ### Opdracht 2 
-  1. -bron 1-
-  2. -bron 2-
-  3. -...-
+  1. [Cursor](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor)
+  2. [Flexbox css-tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+  3. [My old css codes](https://github.com/Sensinki?tab=repositories)
+  4. [Scroll](https://codepen.io/shooft/pen/eYLGWMB?editors=0110)
+  5. [Inspiration](https://www.sinds1971.nl/fvd/bewegen/)
+  6. [chatGPT](https://openai.com/blog/chatgpt)
 
 
 
@@ -101,15 +104,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je ontwerp:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="ontwerp opdracht 2">
+  <img src="readme-images/wireflow.png" height="300px" alt="wireflow opdracht 2">
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Items sorteren
+  - Items zoeken
+  - Gemakkelijk te spelen met de elementen
+  - Dark mode aanpassen
+  - Zoveel mogelijk responsieve schermen te maken
 </details>
 
 
@@ -120,28 +124,74 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na testen (week 7)</summary>
 
   Neem minimaal 5 bevindingen op:
-
-
+  
 
   ### Bevinding 1:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
-
+  Ik dacht dat ik een database moest gebruiken. 
+  
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
+  Later heb ik geleerd dat er een local storage is en het gebruiken van hem is niet moeilijker dan ik dacht.
 
 
   ### Bevinding 2:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  Ik had geen idee hoe ik songs in mijn html kon krijgen. Ik heb js gebruikt om elementen te maken binnen het ul element hieronder. 
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
-
+    <ul id="likedSongsList">
+      <!-- Liked songs will be added dynamically here from liked-songs.js-->
+    </ul>
 
   ### Bevinding 3:
-  ...
-</details>
+  Ik dacht altijd dat chatGPT niet echt hielp om dingen beter te begrijpen.
+  
+  #### oplossing:
+  Ik heb nu ontdekt dat ik de juiste vragen moet stellen als ik nuttige informatie wil. Ik heb bijvoorbeeld het idee van lokale opslag van chatCPT gekregen.
+
+  ### Bevinding 4:
+  Het liken en zien van hetzelfde liedje op een andere pagina was moeilijker dan ik dacht. Ik had veel tijd besteed aan die like-functie.
+  
+  #### oplossing:
+      document.addEventListener("DOMContentLoaded", function () {
+          const likeHearts = document.querySelectorAll(".like");
+      
+          likeHearts.forEach(function (heart) {
+              heart.addEventListener("click", function () {
+                  heart.classList.toggle("liked");
+      
+                  if (heart.classList.contains("liked")) {
+                      heart.setAttribute("src", "images/heart-filled.png");
+                      heart.setAttribute("alt", "heart-filled");
+                  } else {
+                      heart.setAttribute("src", "images/heart.png");
+                      heart.setAttribute("alt", "heart");
+                  }
+      
+                  const songTitle = heart.parentNode.querySelector("h2").innerText;
+                  const artistName = heart.parentNode.querySelector("h3").innerText;
+      
+                  let likedSongs = localStorage.getItem("likedSongs");
+                  if (!likedSongs) {
+                      likedSongs = [songTitle];
+                  } else {
+                      likedSongs = JSON.parse(likedSongs);
+                      likedSongs.push(songTitle);
+                  }
+      
+                  localStorage.setItem("likedSongs", JSON.stringify(likedSongs));
+              });
+          });
+      });
+
+  Na het like effect werkt, heb ik local storage gebruiktom op te slagen.
+
+  ### Bevinding 5:
+  Bij sorteren was ik niet zeker hoe het te doen, Sanne's code helpt mij om deze probleem op te losssen.
+  #### oplossing:
+  Ik vond een library en gebruikte die om sorteerknoppen werkend te krijgen.
+  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script>
+
+  </details>
 
 
 
@@ -151,7 +201,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken bij afronden opdracht (voor week 8)</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitkomst opdracht 2">
+  <img src="readme-images/loading.png" height="300px" alt="index page opdracht 2">
+  <img src="readme-images/index.png" height="300px" alt="index page opdracht 2">
+  <img src="readme-images/index-liked.png" width="375px" alt="index liked page opdracht 2">
+  <img src="readme-images/playlist.png" height="300px" alt="index page opdracht 2">
+  <img src="readme-images/playlist-search.png" height="300px" alt="index page opdracht 2">
+  <img src="readme-images/playlist-sort.png" height="300px" alt="index page opdracht 2">
 
 
   ### Dit ging goed/Heb ik geleerd: 
