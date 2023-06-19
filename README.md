@@ -70,7 +70,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Dit ging goed/Heb ik geleerd:
-  Korte omschrijving met plaatje(s)
   
   - Custom properties
   - Dark/light-mode ging gewoon goed.
@@ -86,7 +85,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatje(s)
   
   - Kleuren zijn erg belangrijk voor contrast, er waren te veel kleuren waardoor het moeilijk was om contrast aan te brengen
   - Ik vind gebruiken van de z-index property lastig. Elementen die op de grond moet blijven zijn niet op de ground, andere elementen komen vóór het elemnt, zoals in de foto te zien.
@@ -201,22 +199,30 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken bij afronden opdracht (voor week 8)</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/loading.png" height="300px" alt="index page opdracht 2">
+  <img src="readme-images/loading.png" height="300px" alt="loading opdracht 2">
   <img src="readme-images/index.png" height="300px" alt="index page opdracht 2">
-  <img src="readme-images/index-liked.png" width="375px" alt="index liked page opdracht 2">
-  <img src="readme-images/playlist.png" height="300px" alt="index page opdracht 2">
-  <img src="readme-images/playlist-search.png" height="300px" alt="index page opdracht 2">
-  <img src="readme-images/playlist-sort.png" height="300px" alt="index page opdracht 2">
+  <img src="readme-images/index-liked.png" height="300px" alt="index liked page opdracht 2">
+  <img src="readme-images/playlist.png" height="300px" alt="playlist page opdracht 2">
+  <img src="readme-images/playlist-search.png" height="300px" alt="playlist search page opdracht 2">
+  <img src="readme-images/playlist-sort.png" height="300px" alt="playlist sort page opdracht 2">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatje(s)
-
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
+  
+  - Custom properties
+  - Dark/light-mode ging gewoon goed.
+  - Reduced motion was makkelijker dan ik dacht
+  - Makkelijk animaties schrijven met @keyframe
+  - Manipuleren van ::after en ::before was makkelijker dan ik dacht
+  - Items sorteren
+  - Drag en drop effect
+  - Items liken en gebruiken in andere pagina
+  - Keyboard functies gebruiken
+  - Local storage
+  - Search functie
+  - Loading animation
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatje(s)
-
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
+  - Wanneer ik weer een nieuw item wil toevoegen aan de locale storage, verdwijnen de items die ik eerder heb toegevoegd. Ik vond het moeilijk om dit probleem op te lossen, dus uiteindelijk besloot ik om het niet toe te voegen.
 </details>
