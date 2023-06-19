@@ -104,7 +104,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je ontwerp:
-  <img src="readme-images/wireflow.png" width="300px" alt="wireflow opdracht 2">
+  <img src="readme-images/wireflow.png" height="300px" alt="wireflow opdracht 2">
 
 
   ### Je ambitie: 
@@ -187,8 +187,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevinding 5:
   Bij sorteren was ik niet zeker hoe het te doen, Sanne's code helpt mij om deze probleem op te losssen.
   #### oplossing:
-  Ik vond een library en gebruikte die om sorteerknoppen werkend te krijgen
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script>
+  Ik vond een library en gebruikte die om sorteerknoppen werkend te krijgen.
+  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script>
 
   </details>
 
@@ -200,7 +201,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken bij afronden opdracht (voor week 8)</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitkomst opdracht 2">
+  <img src="readme-images/loading.png" height="300px" alt="index page opdracht 2">
+  <img src="readme-images/index.png" height="300px" alt="index page opdracht 2">
+  <img src="readme-images/index-liked.png" width="375px" alt="index liked page opdracht 2">
+  <img src="readme-images/playlist.png" height="300px" alt="index page opdracht 2">
+  <img src="readme-images/playlist-search.png" height="300px" alt="index page opdracht 2">
+  <img src="readme-images/playlist-sort.png" height="300px" alt="index page opdracht 2">
 
 
   ### Dit ging goed/Heb ik geleerd: 
