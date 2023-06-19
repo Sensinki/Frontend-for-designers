@@ -82,11 +82,6 @@ let activeButtonIndex = 0;
 
 sortButtons[activeButtonIndex].focus();
 
-function sortSongs(sortType) {
-    // Implement your sorting logic here
-    console.log("Sorting songs:", sortType);
-}
-
 function handleButtonNavigation(event) {
     const key = event.key;
 
