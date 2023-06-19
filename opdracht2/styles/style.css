@@ -22,6 +22,7 @@
     font-family: 'Annie Use Your Telescope', 'eenfont', sans-serif;
     font-family: 'Montserrat';
 
+	/* sizes */
     padding: 0;
     margin: 0;
 }
@@ -66,22 +67,23 @@ button:not(:disabled), summary {
 	}
 }
 
-/* BODY, MAIN */
+/* BODY, MAIN, NAV */
 body {
 	/* color */
   	color: var(--color-text);
   	background-color: var(--color-background);
+
 	/* text */
 	font-family: eenfont, sans-serif;
 }
 
 main {
 	/* display */
-	justify-self:center;
-	overflow:scroll;
+	justify-self: center;
+	overflow: scroll;
 
 	/* sizes */
-	width:100%;
+	width: 100%;
 	margin-top: 15em;
 	margin-bottom: 8em;
 }
@@ -240,15 +242,18 @@ ul li h3 {
 }
 
 .like:hover {
+	/* color */
 	filter: contrast(200%);
 	filter: drop-shadow(6px 6px 8px rgb(68, 5, 116)) invert(0%);
 }
 
 .like.liked {
+	/* color */
   	filter: grayscale(0);
 }
 
 .like.liked:hover {
+	/* animation */
 	animation: heartbeat 1.3s infinite;
 }
 
@@ -258,17 +263,22 @@ ul li h3 {
 
 /* DRAG AND DROP */
 #likedSongsList {
+	/* display */
     list-style-type: none;
+
+	/* sizes */
 	margin-top: 3em;
 }
 
 .sortableSongs,
 .sortableDrag,
 .sortableDrag:focus {
+	/* color */
    background-color: var(--pink);
 }
 
 li.sortableSongs {
+	/* color */
   opacity: .25;
 }
 
@@ -300,7 +310,6 @@ li.sortableSongs {
 	font-family: 'Annie Use Your Telescope', 'eenfont', sans-serif;
     font-family: 'Montserrat';
 
-	
 	/* border */
 	border-radius: .6em;
 	border-color: var(--violet);
@@ -465,6 +474,4 @@ button:focus {
 	transform: rotate(360deg);
 	}
 }
-
-
 

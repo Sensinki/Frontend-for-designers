@@ -104,11 +104,3 @@ function handleButtonNavigation(event) {
 }
 
 document.addEventListener("keydown", handleButtonNavigation);
-
-// LOADING
-setTimeout(function () {
-    const loadingSpinner = document.querySelector(".loading-spinner");
-    if (loadingSpinner) {
-        loadingSpinner.style.display = "none";
-    }
-}, 4000);

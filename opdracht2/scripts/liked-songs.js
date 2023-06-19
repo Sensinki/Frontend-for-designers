@@ -23,14 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
         swapThreshold: 0.5,
         ghostClass: "sortableSong",
         dragClass: "sortableDrag",
-        onMove: function (event) {
-            setTimeout(function () {
-                document.querySelectorAll(".sortableSong, li:nth-of-type(-n+2), li:nth-last-of-type(-n+2)").forEach(function (likedSongs) {
-                    checkIfFirst(likedSongs);
-                    checkIfLast(likedSongs);
-                });
-            }, 10);
-        },
         onEnd: function (event) {
             event.item.focus();
         },
