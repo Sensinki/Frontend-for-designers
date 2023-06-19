@@ -16,11 +16,20 @@
 </head>
 
 <body>
-	<main>
-	<h1>Add some songs</h1>
-	<p>Add your favourite songs to make your dream playlist</p>
 
-	<a href="playlist.html">NEXT</a>
+	<div class="loading-spinner">
+		<h1>Hello there!</h1>
+		<img class="spinner" src="images/plak.png" alt="Loading Spinner">
+	</div>	
+	
+	<nav>
+		<h1>Add some songs</h1>
+		<p>Add your favourite songs to make your dream playlist</p>
+
+		<a href="playlist.html">NEXT</a>
+	</nav>
+
+	<main>
 
 	<ul>
 		<li>
@@ -169,6 +178,13 @@
 	</main>
 
 	<script src="scripts/script.js"></script>
+	  <script>
+    // Simulate a delay of 2 seconds before hiding the loading spinner
+    setTimeout(function() {
+      const loadingSpinner = document.querySelector('.loading-spinner');
+      loadingSpinner.style.display = 'none';
+    }, 2000);
+  </script>
 </body>
 	
 </html>
